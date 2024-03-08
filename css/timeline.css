@@ -1,0 +1,32 @@
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+}
+ul.timeline > li {
+    padding-left: 10px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #0d6efd;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+}
+
+.float-right {
+    float: right;
+    /* padding-right: 10px; */
+}

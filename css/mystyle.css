@@ -1,0 +1,48 @@
+.my-date {
+  margin-bottom: 0.5em;
+}
+
+.my-sv {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.my-article {
+  margin-bottom: 2em;
+}
+
+.my-list {
+  margin-top: 1em;
+}
+
+.my-paper {
+  margin-bottom: 0.1em;
+}
+
+.my-nav-content {
+  cursor: pointer;
+}
+
+.my-last-artical {
+  margin-bottom: 2em;
+}
+
+.hidden-content {
+  display: none;
+}
+
+.my-skill {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: auto;
+  line-height: 3em;
+  font-size: 12px;
+}
+
+.my-event {
+  font-size: 22px;
+  padding-top: 0;
+  margin-top: 0;
+  position: relative;
+  top: -10px;
+}

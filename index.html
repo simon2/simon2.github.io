@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Zhengyang Bai">
+  <title>Homepage -- Zhengyang Bai</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 3rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="css/blog.css" rel="stylesheet">
+  <link href="css/mystyle.css" rel="stylesheet">
+  <link href="css/timeline.css" rel="stylesheet">
+
+  <script>
+    var current = 'home-content'
+    
+    function contentControl(id) {
+      var prev = document.getElementById(current);
+      prev.classList.add("hidden-content");
+      current = id;
+      var curr = document.getElementById(current);
+      curr.classList.remove("hidden-content");
+    }
+  </script>
+</head>
+<body>
+    
+<div class="container">
+  <header class="blog-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-12 text-center">
+        <img src="img/signature.png" height="50px"/>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('home-content')" style="font-size:large;">Home</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('bio-content')" style="font-size:large;">Biography</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('project-content')" style="font-size:large;">Research</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('publication-content')" style="font-size:large;">Publications</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('award-content')" style="font-size:large;">Honors & Awards</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('activity-content')" style="font-size:large;">Academic Activities</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('link-content')" style="font-size:large;">Links</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+
+  <div class="row mb-2">
+    <div class="col-md-12">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-auto d-none d-lg-block">
+          <img src="img/selfie2.jpg" class="bd-placeholder-img" width="250" height="250"/>
+        </div>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Postdoctoral Researcher at RIKEN</strong>
+          <h3 class="mb-0"><span style="font-size: medium;">Dr.</span> Zhengyang Bai</h3>
+          <div class="mb-1 text-muted">
+            High Performance Artificial Intelligence Systems Research Team<br/>
+            RIKEN Center for Computational Science
+          </div>
+          <p class="mb-auto" style="margin-top:1em">
+            My research interests are <i>High Performance Computing</i>, <i>Artificial Intelligence</i> and <i>Task Parallel Languages</i>.
+          </p>
+          <p>
+            My current research topic focuses on <i>Dynamic Dependence Analysis</i>, 
+            <i>Cross Node Work-stealing Strategy</i> in parallel language <i>Tascell</i> and 
+            its application in <i>Hierarchical Matrix</i> Construction.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <div id="home-content">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Welcome!
+        </h3>
+  
+        <article class="blog-post my-article">
+          Thank you for visiting my homepage. I will update my latest information here.<br/>
+          Please contact me if you have any question about my research.
+        </article>
+
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          My Recent Events
+        </h3>
+
+        <div class="container mt-5 mb-5">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="timeline">
+                <li>
+                  <span class="my-event text-primary">Grant Approved</span>
+                  <a href="#" class="float-right">1 Mar, 2024</a>
+                  <p>
+                    With the help of TL Wahib and all team members in HPAIS, my application for the <i>Grant-in-Aid for Early-Career Scientists</i>
+                    with topic "Leveraging Ray Casting for Task Splitting over Processing Elements" has been approved by 
+                    <i>Japan Society for the Promotion of Science (JSPS)</i>, this project will begin from Apr 2024 until Mar 2026.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Poster Presentation</span>
+                  <a href="#" class="float-right">29 Jan, 2024</a>
+                  <p>
+                    Under the supervision of Prof. Peng Chen, poster that I participate as the 4th author with title 
+                    "Efficient Edge-Cloud Computing and Communication Platform"
+                    has been presentated in <i>The 6th R-CCS International Symposium</i>.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Presentation</span>
+                  <a href="#" class="float-right">18 Jan, 2024</a>
+                  <p>
+                    Under the supervision of Prof. Ma, papers that I participate as co-author with title 
+                    "U-KyotoTrip: A Travel Planning System for User Experience Oriented Trips" and 
+                    "An Empirical User Study on Congestion-aware Route Recommendation"
+                    has been presented in <i>ENTER24 e-Tourism Conference</i>.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Presentation</span>
+                  <a href="#" class="float-right">15 Dec, 2023</a>
+                  <p>
+                    Under the supervision of Prof. Ma, paper that I participate as the 2nd author with title 
+                    "Tourist Attractions Prediction with Enhanced Location Knowledge Graph"
+                    has been presentation in <i>The 21st IEEE International Conference on Smart City (Smart City 2023)</i>.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Commitee Experience</span>
+                  <a href="#" class="float-right">10 Nov, 2023</a>
+                  <p>
+                    I am appointed to be the Poster Chair at <i>The 6th R-CCS Internation Symposium</i>.
+                    We are call for posters now, and the submission due is Dec 31, 2023.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Presentation</span>
+                  <a href="#" class="float-right">14 Jul, 2023</a>
+                  <p>
+                    I just gave a talk about my current research <i>Leveraging Ray Casting for Task Splitting over Processing Elements</i> at the The 247th R-CCS Cafe, Kobe.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Employment</span>
+                  <a href="#" class="float-right">1 May, 2023</a>
+                  <p>
+                    I become a Postdoctoral Researcher at High Performance Artificial Intelligence Systems Research Team (HPAIS),
+                    RIKEN Center for Computational Science (R-CCS).
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Degree Conferred</span>
+                  <a href="#" class="float-right">23 Mar, 2023</a>
+                  <p>
+                    Under the supervision of Prof. Fukazawa, I successfully pass the dissertation review and
+                    received the <i>Doctor of Informatics</i> degree from Graduate School of Informatics, Kyoto University.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Paper Published</span>
+                  <a href="#" class="float-right">17 Mar, 2023</a>
+                  <p>
+                    Under the supervision of Prof. Hiraishi, Prof. Ida, Prof. Yasugi and Prof. Fukazawa, my paper 
+                    "Construction of Hierarchical Matrix on Distributed Memory Systems using a Task Parallel Language"
+                    is offically published at <i>2022 The Tenth International Symposium on Computing and Networking Workshops (CANDARW)</i>.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Dissertation</span>
+                  <a href="#" class="float-right">6 Feb, 2023</a>
+                  <p>
+                    My Ph.D. dissertation "Research on Parallel Hierarchical Matrix Construction" is scheduled for 13:30~15:30 in 15 Feb, 2023,
+                    at the Room 404, North Building of the Academic Center for Computing and Media Studies, Kyoto University Yoshida Campus.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Dissertation</span>
+                  <a href="#" class="float-right">23 Dec, 2022</a>
+                  <p>
+                    Under the supervision of Prof. Fukazawa, I just passed the preliminary review of my Ph.D. dissertation.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Conference Presentation</span>
+                  <a href="#" class="float-right">21 Nov, 2022</a>
+                  <p>Under the supervision of Prof. Hiraishi, Prof. Ida, Prof. Yasugi and Prof. Fukazawa, I just 
+                    did an presentation "Construction of Hierarchical Matrix on Distributed Memory Systems using a Task Parallel Language"
+                    at <i>10th International Workshop on Computer Systems and Architectures (CSA'22)</i>, one of the workshops in conjunction with 
+                    <i>2022 Tenth International Symposium on Computing and Networking (CANDAR)</i>.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Paper Published</span>
+                  <a href="#" class="float-right">19 Oct, 2022</a>
+                  <p>Under the supervision of Prof. Hiraishi, Prof. Ida and Prof. Yasugi, my paper 
+                    "Parallelization of Matrix Partitioning in Hierarchical Matrix Construction on Distributed Memory Systems"
+                    is offically published at <i>Journal of Information Processing</i>.
+                  </p>
+                </li>
+                <li>
+                  <span class="my-event text-primary">Conference Presentation</span>
+                  <a href="#" class="float-right">17 Mar, 2022</a>
+                  <p>
+                    Under the supervision of Prof. Hiraishi, Prof. Ida, Prof. Yasugi, I did a presentation at 
+                    <i>the 138th Research Meeting of SIGPRO (PRO-2021-5)</i>, with title of
+                    "Parallelization of Matrix Partitioning in Hierarchical Matrix Construction Using Node-aware Work Stealing".
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden-content" id="bio-content">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Work Experience
+        </h3>
+  
+        <article class="blog-post my-last-artical">
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/riken_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Postdoctoral Researcher, RIKEN</h5>
+              <p class="text-muted my-date">Tokyo, May 2023 -- Present. </p>
+              <p class="my-sv">Department: RIKEN Center for Computational Science</p>
+              <p class="my-sv">Team: High Performance Artificial Intelligence Systems Research Team</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/Yahoo_Japan_Logo.png" width="60"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Outsourcing Partner, Yahoo! Japan</h5>
+              <p class="text-muted my-date">Osaka, Apr 2022 -- Mar 2023. </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/ku_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Research Assistant, Kyoto University</h5>
+              <p class="text-muted my-date">Kyoto, Oct 2019 -- Mar 2023. </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Kyoto University Graduate Division Fellow</h5>
+              <p class="text-muted my-date">Kyoto, Dec 2021 -- Mar 2022. </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Teaching Assistant</h5>
+              <p class="text-muted my-date">Kyoto, Apr 2018 -- Aug 2020. </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/fujitsu_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">System Engineer, Fujitsu Marketing Ltd.</h5>
+              <p class="text-muted my-date">Tokyo, Oct 2015 -- Mar 2016. </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/tb_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Android Engineer (intern), Teambition</h5>
+              <p class="text-muted my-date">Shanghai, Dec 2014 -- Feb 2015. </p>
+            </div>
+          </div>
+
+        </article>
+
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Education
+        </h3>
+  
+        <article class="blog-post my-article">
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/ku_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Doctor of Informatics, Kyoto University</h5>
+              <p class="text-muted my-date">Kyoto, Apr 2019 -- Mar 2023. </p>
+              <p class="my-sv">Department: Department of System Science, Graduate School of Informatics</p>
+              <p class="my-sv">Thesis: Research on Parallel Hierarchical Matrix Construction</p>
+              <p class="my-sv">Supervisor: Prof. Keiichiro Fukazawa</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/ku_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Master of Informatics, Kyoto University</h5>
+              <p class="text-muted my-date">Kyoto, Apr 2017 -- Mar 2019. </p>
+              <p class="my-sv">Department: Department of System Science, Graduate School of Informatics</p>
+              <p class="my-sv">Thesis: Implementation of Partitioning of Hierarchical Matrices using Task Parallel Languages</p>
+              <p class="my-sv">Supervisor: Prof. Hiroshi Nakashima</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/ecnu_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Bachelor of Engineering, East China Normal University</h5>
+              <p class="text-muted my-date">Shanghai, Sep 2011 -- Jun 2015. </p>
+              <p class="my-sv">Department: Software Engineering Institute</p>
+              <p class="my-sv">Thesis: Reverse Analysis for Java Class by ASM (in Chinese)</p>
+              <p class="my-sv">Supervisor: Prof. Liangyu Chen</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      
+      <div class="hidden-content" id="project-content">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Research
+        </h3>
+  
+        <article class="blog-post my-article">
+          <h5 class="blog-post-title mb-1">Leveraging Ray Casting for Task Splitting over Processing Elements</h5>
+          <p>
+            Task splitting based on task dependency analysis is a critical aspect of task-based runtime systems, as it significantly impacts performance. 
+            An effective task splitting algorithm should allocate tasks to processing elements (PEs) with improved data locality and minimizing the overhead caused by data communication. 
+            Traditionally, this analysis is performed using a Task Dependency Graph, which is a sparse matrix with complex algorithms, making it difficult to accelerate. 
+            However, we propose a novel approach to enhance performance by modeling the task dependency analysis problem as a visibility problem and employing ray casting 
+            to extract the dependencies and split the tasks.
+          </p>
+          <p>
+            In this research, we delve into the concept of using ray casting for task dependency analysis and splitting, 
+            explaining why it offers a promising alternative to conventional methods and the potential advantages over existing techniques.
+          </p>
+
+          <h5 class="blog-post-title mb-1">H-matrix Construction by Task Parallel Languages</h5>
+          <p>This research is a parallelized implementation of hierarchical matrices construction using task parallel languages like <a href="https://cilkplus.github.io/">Cilk Plus</a> and <a href="http://ais.sys.i.kyoto-u.ac.jp/~task/tascell/index.html">Tascell</a> based on a Fortran implementation in <a href="http://ppopenhpc.cc.u-tokyo.ac.jp/ppopenhpc/2017/01/31/ppopen-applbem-ver-0-5-0/">HACApK</a> library coded by Prof. Akihiro Ida.</p>
+          
+          <p>
+            The construction of the hierarchical matrix is achieved
+            by dividing a matrix into submatrices (partitioning), followed
+            by calculating these submatrices' entries (filling). The matrix
+            partitioning is divided into two sub-steps: cluster tree (CT)
+            construction by dividing objects into clusters, hierarchically, and
+            block cluster tree (BCT) construction by observing all cluster
+            pairs at the same level of the cluster tree that satisfy a given
+            admissibility condition. Therefore, both CT and BCT construction 
+            are unpredictably imbalance, it is difficult to parallelize it using 
+            traditional Techniques. Here, together with my supervisor and advisors,
+            I proposed a new parallel implementation on H-matrix construction using task parallel languages.
+          </p>
+          
+          <article>To learn details about HACApK, please check <a href="https://github.com/Post-Peta-Crest/ppOpenHPC/tree/MATH/HACApK">HACApK github repository</a>.</article>
+          <article>To learn more about Tascell, please visit <a href="https://github.com/tascell/sc-tascell">Tascell github repository</a>.</article>
+          <article>For details of this implementation, please go to <a href="https://github.com/simon2/H-div">GitHub repository</a> and read papers in JIP <a href="https://www.jstage.jst.go.jp/article/ipsjjip/27/0/27_840/_article">Vol.27</a> and <a href="https://www.jstage.jst.go.jp/article/ipsjjip/30/0/30_742/_article/-char/ja/">Vol.30</a>.</article>
+          <br/>
+
+          <h5 class="blog-post-title mb-1">Node-aware Work-stealing in Tascell</h5>
+          <p>
+            This research is initially built to solve a problem in CT construction in the research above,
+            which allows users to add notations to tell Tascell compiler how to deal with task request
+            bese on the information of where the task request comes from. We call this feature <i>node-guard</i>
+            and packaged it into Tascell with an easy syntax to use.
+          </p>
+          <p>
+            This research can be apply to all application with a similiar problem like CT construction.
+            In detail, when there are more than 1 kind of parallel blocks in the same part of program 
+            and some of them is appropriate for cross-node work-steal but the others are not, programmer
+            can use this feature to maximize the performance by control which can do cross node Work-stealing
+            and whic cannot.
+            We also found that this research gives programmer using Tascell a posibility to improve performance
+            by adding probability into node-guard control. However, this statement still needs more experiments to prove.
+          </p>
+          <p>
+            To learn more about this research please visit <a href="https://github.com/simon2/sc-tascell/tree/mpi-bcst">my Tascell repository</a> forked from origin Tascell.
+            (It is going to merge into origin Tascell soon.)
+          </p>
+        </article>
+      </div>
+
+      <div class="hidden-content" id="publication-content">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Publications
+        </h3>
+  
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Papers</h5>
+          <ul class="my-list">
+            <li>
+              <p class="my-paper">
+                <b>Construction of Hierarchical Matrix on Distributed Memory Systems using a Task Parallel Language</b>, <u>Z Bai</u>, T Hiraishi, A Ida, M Yasugi, K Fukazawa, 
+                <i>2022 The Tenth International Symposium on Computing and Networking Workshops (CANDARW)</i>, pp. 48--54, Nov 2022.
+                <a href="https://ieeexplore.ieee.org/abstract/document/10062615">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Parallelization of Matrix Partitioning in Hierarchical Matrix Construction on Distributed Memory Systems</b>, <u>Z Bai</u>, T Hiraishi, A Ida, M Yasugi,
+                <i>Journal of Information Processing</i>, Vol. 30, pp. 742--754, Oct 2022.
+                <a href="https://www.jstage.jst.go.jp/article/ipsjjip/30/0/30_742/_article/-char/en">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Parallelization of Matrix Partitioning in Construction of Hierarchical Matrices using Task Parallel Languages</b>, <u>Z Bai</u>, T Hiraishi, H Nakashima, A Ida, M Yasugi,
+                <i>Journal of Information Processing</i>, Vol. 27, pp. 840--851, Nov 2019.
+                <a href="https://www.jstage.jst.go.jp/article/ipsjjip/27/0/27_840/_article/-char/en">link</a>
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Misc.</h5>
+          <ul class="my-list">
+            <li>
+              <p class="my-paper">
+                <b>Research on Parallel Hierarchical Matrix Construction</b>, <u>Z Bai</u>, Ph.D. Dissertation, Kyoto University, Mar 2023.
+                <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/283863">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Recommending POIs for Tourists by User Behavior Modeling and Pseudo-Rating</b>, K Yi, R Yamagishi, T Li, <u>Z Bai</u>, Q Ma, 
+                <i>arXiv preprint arXiv:2110.06523</i>, Nov 2021.
+                <a href="https://arxiv.org/abs/2110.06523">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Implementation of Partitioning of Hierarchical Matrices using Task Parallel Languages</b>, <u>Z Bai</u>, T Hiraishi, H Nakashima, A Ida, M Yasugi,
+                <i>The 48th International Conference on Parallel Processing (ICPP2019)</i>, Poster Abstract, Kyoto, Japan, Aug 2019. <u>(Best Poster Award winner)</u>
+                <a href="https://www.hpcs.cs.tsukuba.ac.jp/icpp2019/program/posters/index.html">link</a>
+              </p>
+            </li>
+          </ul>
+        </article>
+  
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Presentations</h5>
+          <ul class="my-list">
+            <li>
+              <p class="my-paper">
+                <b>Efficient Edge-Cloud Computing and Communication Platform</b>, P Chen, Y Tan, D Wu, <u>Z Bai</u>, M Wahib, Y Tanimura,
+                <i>The 6th R-CCS International Symposium</i>, Poster, Kobe, Japan, Jan 2024. 
+                <a href="https://www.r-ccs.riken.jp/R-CCS-Symposium/2024/program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>U-KyotoTrip: A Travel Planning System for User Experience Oriented Trips</b>, K Yi, T Maekawa, Y Kong, <u>Z Bai</u>, X Jin, Q Ma,
+                <i>ENTER24 e-Tourism Conference</i>, Izumir, Turkey, Jan 2024. 
+                <a href="https://enter-conference.org/conference-program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>An Empirical User Study on Congestion-aware Route Recommendation</b>, K Yi, X Jin, <u>Z Bai</u>, Y Kong, Q Ma,
+                <i>ENTER24 e-Tourism Conference</i>, Izumir, Turkey, Jan 2024. 
+                <a href="https://enter-conference.org/conference-program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Tourist Attractions Prediction with Enhanced Location Knowledge Graph</b>, J Xu, <u>Z Bai</u>, Q Ma,
+                <i>The 21st IEEE International Conference on Smart City (Smart City 2023)</i>, Melbourne, Austria, Dec 2023.
+                <a href="http://www.swinflow.org/confs/2023/hpcc/program.htm">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Leveraging Ray Casting for Task Splitting over Processing Elements</b>, <u>Z Bai</u>,
+                <i>The 247th R-CCS Cafe</i>, Kobe, Japan, Jul 2023. 
+                <a href="https://www.r-ccs.riken.jp/en/outreach/r-ccs-cafe/247/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Construction of Hierarchical Matrix on Distributed Memory Systems using a Task Parallel Language</b>, <u>Z Bai</u>, T Hiraishi, A Ida, M Yasugi, K Fukazawa,
+                <i>10th International Workshop on Computer Systems and Architectures (CSA'22)</i>, Himeji, Japan, Nov 2022.
+                <a href="https://is-candar.org/candar22/program">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Parallelization of Matrix Partitioning in Hierarchical Matrix Construction Using Node-aware Work Stealing</b>, <u>Z Bai</u>, T Hiraishi, A Ida, M Yasugi,
+                <i>the 138th Research Meeting of SIGPRO (PRO-2021-5), Information Processing Society of Japan</i>, Tsukuba, Japan, Mar 2022.
+                <a href="https://sigpro.ipsj.or.jp/pro2021-5/program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Task Parallel Language Tascell and its Application to Hierarchical Matrices (in Japanese)</b>, <u>Z Bai</u>,
+                <i>The 14th ICT Innovation</i>, Poster, Kyoto, Japan, Feb 2020.
+                <a href="https://ict-nw.i.kyoto-u.ac.jp/old/ict-innovation/14th/panel/index.php.html">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Implementation of Partitioning of Hierarchical Matrices using Task Parallel Languages</b>, <u>Z Bai</u>, T Hiraishi, H Nakashima, A Ida, M Yasugi,
+                <i>The 48th International Conference on Parallel Processing (ICPP2019)</i>, Poster, Kyoto, Japan, Aug 2019. <u>(Best Poster Award winner)</u>
+                <a href="https://www.hpcs.cs.tsukuba.ac.jp/icpp2019/program/posters/index.html">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Parallelization of Matrix Partitioning in Construction of Hierarchical Matrices using Task Parallel Languages</b>, <u>Z Bai</u>, T Hiraishi, H Nakashima, A Ida, M Yasugi,
+                <i>The 3rd cross-disciplinary Workshop on Computing Systems, Infrastructures, and Programming (xSIG2019)</i>, Presentation & Poster, Yokohama, Japan, May 2019. <u>(Outstanding Research Award winner)</u>
+                <a href="http://xsig.hpcc.jp/2019/program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Hierarchical Matrices and its Parallelization by Dynamic Load Balancing (in Japanese)</b>, <u>Z Bai</u>,
+                <i>The 13th ICT Innovation</i>, Presentation & Poster, Kyoto, Japan, Feb 2019.
+                <a href="https://ict-nw.i.kyoto-u.ac.jp/old/ict-innovation/13th/panel/index.php.html">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Parallelization of Matrix Partitioning in Construction of Hierarchical Matrices using Task Parallel Languages</b>, <u>Z Bai</u>, T Hiraishi, H Nakashima, A Ida, M Yasugi,
+                <i>the 122th Research Meeting of SIGPRO (PRO-2018-4), Information Processing Society of Japan</i>, Fukuyama, Japan, Feb 2019.
+                <a href="https://sigpro.ipsj.or.jp/pro2018-4/program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Parallelization of Matrix Partitioning in Construction of Hierarchical Matrices by Cilk Plus (in Japanese)</b>, <u>Z Bai</u>, T Hiraishi, A Ida, H Nakashima, M Yasugi,
+                <i>The 20th Programming and Programming Language Workshop (PPL2018)</i>, Poster, Yonago, Japan, Mar 2018.
+                <a href="https://jssst-ppl.org/workshop/2018/program.html">link</a>
+              </p>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="hidden-content" id="award-content">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Honors & Awards
+        </h3>
+  
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Awards</h5>
+          <ul class="my-list">
+            <li>
+              <b>Best Poster Award</b>, <i>ICPP2019</i>, Aug 2019.
+            </li>
+            <li>
+              <b>Outstanding Research Award</b>, <i>xSIG2019</i>, May 2019.
+            </li>
+            <li>
+              <b>Second Prize</b>, <i>Software Cup of ECNU</i>, Oct 2014.
+            </li>
+            <li>
+              <b>Honorable Mention</b>, <i>Mathematical Contest in Modeling (MCM)</i>, Sep 2014.
+            </li>
+          </ul>
+        </article>
+
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Research Funds</h5>
+          <ul class="my-list">
+            <li>
+              <b>Grants-in-Aid for Scientific Research (KAKENHI): Grant-in-Aid for Early-Career Scientists</b> <br/>
+              Issued by: <i>Japan Society for the Promotion of Science (JSPS)</i>, Apr 2024 -- Mar 2026. <br/>
+              Topic: Leveraging Ray Casting for Task Splitting over Processing Elements.
+            </li>
+            <li>
+              <b>SPRING: Support for Pioneering Research Initiated by the Next Generation</b> <br/>
+              Issued by: <i>Japan Science and Technology Agency (JST)</i>, Dec 2021 -- Mar 2022. <br/>
+              Topic: Data Locality Aware Dynamic Load Balancing and Its Application to Large Scale Parallelization of Hierarchical Matrices.
+            </li>
+            <li>
+              <b>Daxia Undergraduate Research Fund</b> <br/>
+              Issued by: <i>East China Normal University</i>, Dec 2013 -- Nov 2014. <br/>
+              Topic: Feasibility Analysis of Arbitrage in China's Foreign Exchange Market and Its Andriod Software Development (in Chinese).
+            </li>
+          </ul>
+        </article>
+  
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Scholarships</h5>
+          <ul class="my-list">
+            <li>
+              <b>Kawaguchi Shizu Memorial Scholarship</b>, <i>The Asian Foundation for International Scholarship Interchange</i>, Mar 2018.
+            </li>
+            <li>
+              <b>IFTC Scholarship</b>, <i>The iNFOTEC Group</i>, Apr 2015.
+            </li>
+            <li>
+              <b>IFTC Scholarship</b>, <i>The iNFOTEC Group</i>, Apr 2014.
+            </li>
+            <li>
+              <b>Scholarship for Outstanding Student of Ethnic Minorities</b>, <i>East China Normal University</i>, Nov 2012.
+            </li>
+          </ul>
+        </article>
+  
+        <article class="blog-post my-last-artical">
+          <h5 class="blog-post-title mb-1">Certifications</h5>
+          <ul class="my-list">
+            <li>
+              <b>Information Storage and Management</b>, <i>EMC Academic Associate</i>, Dec 2013.
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="hidden-content" id="activity-content">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Academic Activities
+        </h3>
+  
+        <article class="blog-post my-last-artical">
+          
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/riken_logo.jpg" width="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Poster Chair, The 6th R-CCS International Symposium (RCCS-IS6)</h5>
+              <p class="text-muted my-date">Kobe, Jun 2023 -- Jan 2024. </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/DEXA2023_logo.png" width="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Sub-reviewer, International Conference on Database and Expert Systems Applications (DEXA2023)</h5>
+              <p class="text-muted my-date">Online, May 2023. </p>
+            </div>
+          </div>
+          
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/ICPP_logo.png" width="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Student Staff, The 48th International Conference on Parallel Processing (ICPP2019)</h5>
+              <p class="text-muted my-date">Kyoto, Aug 2019. </p>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/riken_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Participant, International HPC Summer School (IHPCSS) 2019</h5>
+              <p class="text-muted my-date">Kobe, Jul 2019. </p>
+            </div>
+          </div>
+          
+          
+          
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/riken_logo.jpg" height="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Participant, the 3rd RIKEN R-CCS HPC Youth Workshop</h5>
+              <p class="text-muted my-date">Kobe, Feb 2019. </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <img src="img/PPL_logo.png" width="50"/>
+            </div>
+            <div class="col-md-11">
+              <h5 class="blog-post-title mb-1">Student Staff, The 20th Programming and Programming Language Workshop (PPL2018)</h5>
+              <p class="text-muted my-date">Yonago, Mar 2018. </p>
+            </div>
+          </div>
+          
+        </article>
+      </div>
+
+      <div class="hidden-content" id="link-content">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Links
+        </h3>
+  
+        <article class="blog-post my-article">
+          <h5 class="blog-post-title mb-1">About Parallel H-matrix Construction</h5>
+          <ul class="my-list">
+            <li>
+              <a href="https://github.com/simon2/H-div">GitHub Repository</a>
+            </li>
+            <li>
+              <a href="https://github.com/Post-Peta-Crest/ppOpenHPC/tree/MATH/HACApK">Hacapk GitHub Repository</a>
+            </li>
+            <li>
+              <a href="http://ppopenhpc.cc.u-tokyo.ac.jp/ppopenhpc/">ppOpen-HPC project</a>
+            </li>
+          </ul>
+
+          <h5 class="blog-post-title mb-1">About Task Parallel Language Tascell</h5>
+          <ul class="my-list">
+            <li>
+              <a href="https://github.com/simon2/sc-tascell/tree/mpi-bcst">My GitHub Repository Fork</a>
+            </li>
+            <li>
+              <a href="https://github.com/tascell/sc-tascell">Origin Tascell GitHub Repository</a>
+            </li>
+            <li>
+              <a href="http://ais.sys.i.kyoto-u.ac.jp/~task/tascell/">Tascell Homepage</a>
+            </li>
+          </ul>
+
+          <h5 class="blog-post-title mb-1">About RIKEN</h5>
+          <ul class="my-list">
+            <li>
+              <a href="https://www.riken.jp/en/">RIKEN</a>
+            </li>
+            <li>
+              <a href="https://www.r-ccs.riken.jp/en/">RIKEN Center for Computational Science</a>
+            </li>
+            <li>
+              <a href="https://www.r-ccs.riken.jp/en/research/labs/hpaisrt/">High Performance Artificial Intelligence Systems Research Team</a>
+            </li>
+          </ul>
+
+          <h5 class="blog-post-title mb-1">About Kyoto University</h5>
+          <ul class="my-list">
+            <li>
+              <a href="https://www.kyoto-u.ac.jp/en">Kyoto University</a>
+            </li>
+            <li>
+              <a href="https://www.i.kyoto-u.ac.jp/en/">Graduate School of Informatics</a>
+            </li>
+            <li>
+              <a href="http://www.sys.i.kyoto-u.ac.jp/en/index.html">Department of System Science</a>
+            </li>
+            <li>
+              <a href="http://ais.sys.i.kyoto-u.ac.jp/">Supercomputing Research Lab</a>
+            </li>
+          </ul>
+          
+          <h5 class="blog-post-title mb-1">About East China Normal University</h5>
+          <ul class="my-list">
+            <li>
+              <a href="https://english.ecnu.edu.cn/">East China Normal University</a>
+            </li>
+            <li>
+              <a href="http://www.sei.ecnu.edu.cn/seien/">Software Engineering Institute</a>
+            </li>
+          </ul>
+
+        </article>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic">Details</h4>
+          <p class="mb-0">
+            <b>Address:</b> Nihobashi 1-chome Mitsui Building, 15th floor, 1-4-1 Nihonbashi, Chuo-ku, Tokyo 103-0027, Japan.
+          </p>
+          <p class="mb-0">
+            <b>Email:</b> zhengyang.bai@riken.jp
+          </p>
+          <p>
+            <b>Tel:</b> +81-50-3495-0238
+          </p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic" style="margin-bottom: 0.5em;">Skills</h4>
+          <!-- HPC Skills -->
+          <span class="my-skill bg-primary text-white">C</span>
+          <span class="my-skill bg-primary text-white">C++</span>
+          <span class="my-skill bg-primary text-white">OpenMP</span>
+          <span class="my-skill bg-primary text-white">MPI</span>
+          <span class="my-skill bg-primary text-white">OptiX</span>
+          <span class="my-skill bg-primary text-white">CUDA</span>
+          <span class="my-skill bg-primary text-white">Tascell</span>
+          <span class="my-skill bg-primary text-white">Cilk Plus</span>
+          <span class="my-skill bg-primary text-white">Fortran</span>
+          <span class="my-skill bg-primary text-white">OpenACC</span>
+          <!-- common skills -->
+          <span class="my-skill bg-info text-white">linux</span>
+          <span class="my-skill bg-info text-white">git</span>
+          <!-- Data Skills -->
+          <span class="my-skill bg-success text-white">Python</span>
+          <span class="my-skill bg-success text-white">Jupyter</span>
+          <span class="my-skill bg-success text-white">R</span>
+          <span class="my-skill bg-success text-white">VBA</span>
+          <span class="my-skill bg-success text-white">SQL</span>
+          <!-- App Skills -->
+          <span class="my-skill bg-secondary text-white">Java</span>
+          <span class="my-skill bg-secondary text-white">Javascript</span>
+          <span class="my-skill bg-secondary text-white">Matlab</span>
+          <span class="my-skill bg-secondary text-white">Visual Basic</span>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Languages</h4>
+          
+          <h6 class="col-md-2">English</h6>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" >
+              <span class="sr-only"></span>
+            </div>
+          </div>
+
+          <h6 class="col-md-2" style="margin-top: 0.5em;">Japanese</h6>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" >
+              <span class="sr-only"></span>
+            </div>
+          </div>
+
+          <h6 class="col-md-2" style="margin-top: 0.5em;">Chinese</h6>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" >
+              <span class="sr-only"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://github.com/simon2">GitHub</a></li>
+            <li><a href="https://scholar.google.com/citations?hl=en&user=J8nrlAIAAAAJ">Google Scholar</a></li>
+            <li><a href="https://orcid.org/0000-0002-0124-2111">ORCID</a></li>
+            <li><a href="https://researchmap.jp/zhengyang_bai?lang=en">researchmap</a></li>
+            <li><a href="https://www.linkedin.com/in/zhengyang-bai-2542bb161">Linkedin</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+  <p>This homepage is modified from Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>
+    <a href="index.html#">Back to top</a>
+  </p>
+</footer>
+
+</body></html>
