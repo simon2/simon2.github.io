@@ -1,2 +1,6 @@
 # for MacOS
 .DS_Store
+
+# for MS docs
+*.doc
+*.docx
