@@ -90,8 +90,8 @@
     <nav class="nav d-flex justify-content-between">
       <a class="p-2 link-secondary my-nav-content" onclick="contentControl('home-content')" style="font-size:large;">Home</a>
       <a class="p-2 link-secondary my-nav-content" onclick="contentControl('bio-content')" style="font-size:large;">Biography</a>
-      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('project-content')" style="font-size:large;">Research</a>
-      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('publication-content')" style="font-size:large;">Publications</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('project-content')" style="font-size:large;">Research Topics</a>
+      <a class="p-2 link-secondary my-nav-content" onclick="contentControl('publication-content')" style="font-size:large;">Publication Lists</a>
       <a class="p-2 link-secondary my-nav-content" onclick="contentControl('award-content')" style="font-size:large;">Honors & Awards</a>
       <a class="p-2 link-secondary my-nav-content" onclick="contentControl('activity-content')" style="font-size:large;">Academic Activities</a>
       <a class="p-2 link-secondary my-nav-content" onclick="contentControl('link-content')" style="font-size:large;">Links</a>
@@ -478,7 +478,7 @@
       
       <div class="hidden-content" id="project-content">
         <h3 class="pb-4 mb-4 fst-italic border-bottom">
-          Research
+          Research Topics
         </h3>
   
         <article class="blog-post my-article">
@@ -543,11 +543,11 @@
 
       <div class="hidden-content" id="publication-content">
         <h3 class="pb-4 mb-4 fst-italic border-bottom">
-          Publications
+          Publication Lists
         </h3>
   
         <article class="blog-post">
-          <h5 class="blog-post-title mb-1">Papers</h5>
+          <h5 class="blog-post-title mb-1">Publications</h5>
           <ul class="my-list">
             <li>
               <p class="my-paper">
@@ -603,7 +603,19 @@
         </article>
 
         <article class="blog-post">
-          <h5 class="blog-post-title mb-1">Misc.</h5>
+          <h5 class="blog-post-title mb-1">Ph.D. Dissertation</h5>
+          <ul class="my-list">
+            <li>
+              <p class="my-paper">
+                <b>Research on Parallel Hierarchical Matrix Construction</b>, <u>Zhengyang Bai</u>, Kyoto University, Mar 2023.
+                <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/283863">link</a>
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Non-archival Publications</h5>
           <ul class="my-list">
             <li>
               <p class="my-paper">
@@ -623,14 +635,8 @@
             <li>
               <p class="my-paper">
                 <b>Graphical Representation for Directed Acyclic Graph with Ray Tracing Cores Acceleration</b>, <u>Zhengyang Bai</u>, Peng Chen, Chen Zhuang, Jing Xu, Emil Vatai, Mohamed Wahib,
-                <i>The international Conference on High Performance Computing in Aisa-Pacific Region (HPC ASIA 2025)</i>, Poster, Hsinchu, Taiwan, Feb 2025. 
+                <i>The international Conference on High Performance Computing in Aisa-Pacific Region (HPC ASIA 2025)</i>, Extended Abstract, Hsinchu, Taiwan, Feb 2025. 
                 <a href="https://event1.nchc.org.tw/hpcasia2025/accepted_list.html">link</a>
-              </p>
-            </li>
-            <li>
-              <p class="my-paper">
-                <b>Research on Parallel Hierarchical Matrix Construction</b>, <u>Zhengyang Bai</u>, Ph.D. Dissertation, Kyoto University, Mar 2023.
-                <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/283863">link</a>
               </p>
             </li>
             <li>
@@ -643,7 +649,7 @@
             <li>
               <p class="my-paper">
                 <b>Implementation of Partitioning of Hierarchical Matrices using Task Parallel Languages</b>, <u>Zhengyang Bai</u>, Tasuku Hiraishi, Hiroshi Nakashima, Akihiro Ida, Masahiro Yasugi,
-                <i>The 48th International Conference on Parallel Processing (ICPP2019)</i>, Poster, Kyoto, Japan, Aug 2019. <u class="my-award">(Best Poster Award winner)</u>
+                <i>The 48th International Conference on Parallel Processing (ICPP2019)</i>, Extended Abstract, Kyoto, Japan, Aug 2019. <u class="my-award">(Best Poster Award winner)</u>
                 <a href="https://www.hpcs.cs.tsukuba.ac.jp/icpp2019/program/posters/index.html">link</a>
               </p>
             </li>
@@ -651,36 +657,8 @@
         </article>
   
         <article class="blog-post">
-          <h5 class="blog-post-title mb-1">Presentations</h5>
+          <h5 class="blog-post-title mb-1">Oral Presentations</h5>
           <ul class="my-list">
-            <li>
-              <p class="my-paper">
-                <b>Critical Path Detecting with Ray Tracing Cores Acceleration</b>, <u>Zhengyang Bai</u>, Peng Chen, Chen Zhuang, Jing Xu, Emil Vatai, Mohamed Wahib,
-                <i>The 7th R-CCS International Symposium</i>, Poster, Kobe, Japan, Jan 2025. 
-                <a href="https://www.r-ccs.riken.jp/R-CCS-Symposium/2025/program/">link</a>
-              </p>
-            </li>
-            <li>
-              <p class="my-paper">
-                <b>Leveraging Ray-casting for Task Splitting over Processing Elements</b>, <u>Zhengyang Bai</u>, Mohamed Wahib, Emil Vatai, Chen Zhuang, Peng Chen,
-                <i>Cross-disciplinary Workshop on Computing Systems, Infrastructures, and Programming (xSIG2024)</i>, Poster, Tokushima, Japan, Aug 2024. 
-                <a href="https://xsig.ipsj.or.jp/2024/#topics">link</a>
-              </p>
-            </li>
-            <li>
-              <p class="my-paper">
-                <b>Critical Path Detecting by Ray-casting with Ray-tracing Cores Acceleration</b>, <u>Zhengyang Bai</u>, Mohamed Wahib, Chen Zhuang, Peng Chen,
-                <i>Joint Laboratory for Extreme-Scale Computing (JLESC16)</i>, Poster, Kobe, Japan, Apr 2024. 
-                <a href="https://sites.google.com/view/jlesc16/%E3%83%9B%E3%83%BC%E3%83%A0">link</a>
-              </p>
-            </li>
-            <li>
-              <p class="my-paper">
-                <b>Efficient Edge-Cloud Computing and Communication Platform</b>, Peng Chen, Yiyu Tan, Du Wu, <u>Zhengyang Bai</u>, Mohamed Wahib, Yusuke Tanimura,
-                <i>The 6th R-CCS International Symposium</i>, Poster, Kobe, Japan, Jan 2024. 
-                <a href="https://www.r-ccs.riken.jp/R-CCS-Symposium/2024/program/">link</a>
-              </p>
-            </li>
             <li>
               <p class="my-paper">
                 <b>Leveraging Ray Casting for Task Splitting over Processing Elements</b>, <u>Zhengyang Bai</u>,
@@ -697,22 +675,15 @@
             </li>
             <li>
               <p class="my-paper">
-                <b>Task Parallel Language Tascell and its Application to Hierarchical Matrices</b>(in Japanese), <u>Zhengyang Bai</u>,
-                <i>The 14th ICT Innovation</i>, Poster, Kyoto, Japan, Feb 2020.
-                <a href="https://ict-nw.i.kyoto-u.ac.jp/old/ict-innovation/14th/panel/index.php.html">link</a>
-              </p>
-            </li>
-            <li>
-              <p class="my-paper">
                 <b>Parallelization of Matrix Partitioning in Construction of Hierarchical Matrices using Task Parallel Languages</b>, <u>Zhengyang Bai</u>, Tasuku Hiraishi, Hiroshi Nakashima, Akihiro Ida, Masahiro Yasugi,
-                <i>The 3rd cross-disciplinary Workshop on Computing Systems, Infrastructures, and Programming (xSIG2019)</i>, Presentation & Poster, Yokohama, Japan, May 2019. <u class="my-award">(Outstanding Research Award winner)</u>
+                <i>The 3rd cross-disciplinary Workshop on Computing Systems, Infrastructures, and Programming (xSIG2019)</i>, Yokohama, Japan, May 2019. <u class="my-award">(Outstanding Research Award winner)</u>
                 <a href="http://xsig.hpcc.jp/2019/program/">link</a>
               </p>
             </li>
             <li>
               <p class="my-paper">
                 <b>Hierarchical Matrices and its Parallelization by Dynamic Load Balancing</b>(in Japanese), <u>Zhengyang Bai</u>,
-                <i>The 13th ICT Innovation</i>, Presentation & Poster, Kyoto, Japan, Feb 2019.
+                <i>The 13th ICT Innovation</i>, Kyoto, Japan, Feb 2019.
                 <a href="https://ict-nw.i.kyoto-u.ac.jp/old/ict-innovation/13th/panel/index.php.html">link</a>
               </p>
             </li>
@@ -723,10 +694,58 @@
                 <a href="https://sigpro.ipsj.or.jp/pro2018-4/program/">link</a>
               </p>
             </li>
+          </ul>
+        </article>
+
+        <article class="blog-post">
+          <h5 class="blog-post-title mb-1">Poster Presentations</h5>
+          <ul class="my-list">
+            <li>
+              <p class="my-paper">
+                <b>Critical Path Detecting with Ray Tracing Cores Acceleration</b>, <u>Zhengyang Bai</u>, Peng Chen, Chen Zhuang, Jing Xu, Emil Vatai, Mohamed Wahib,
+                <i>The 7th R-CCS International Symposium</i>, Kobe, Japan, Jan 2025. 
+                <a href="https://www.r-ccs.riken.jp/R-CCS-Symposium/2025/program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Leveraging Ray-casting for Task Splitting over Processing Elements</b>, <u>Zhengyang Bai</u>, Mohamed Wahib, Emil Vatai, Chen Zhuang, Peng Chen,
+                <i>Cross-disciplinary Workshop on Computing Systems, Infrastructures, and Programming (xSIG2024)</i>, Tokushima, Japan, Aug 2024. 
+                <a href="https://xsig.ipsj.or.jp/2024/#topics">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Critical Path Detecting by Ray-casting with Ray-tracing Cores Acceleration</b>, <u>Zhengyang Bai</u>, Mohamed Wahib, Chen Zhuang, Peng Chen,
+                <i>Joint Laboratory for Extreme-Scale Computing (JLESC16)</i>, Kobe, Japan, Apr 2024. 
+                <a href="https://sites.google.com/view/jlesc16/%E3%83%9B%E3%83%BC%E3%83%A0">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Efficient Edge-Cloud Computing and Communication Platform</b>, Peng Chen, Yiyu Tan, Du Wu, <u>Zhengyang Bai</u>, Mohamed Wahib, Yusuke Tanimura,
+                <i>The 6th R-CCS International Symposium</i>, Kobe, Japan, Jan 2024. 
+                <a href="https://www.r-ccs.riken.jp/R-CCS-Symposium/2024/program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Parallelization of Matrix Partitioning in Hierarchical Matrix Construction Using Node-aware Work Stealing</b>, <u>Zhengyang Bai</u>, Tasuku Hiraishi, Akihiro Ida, Masahiro Yasugi,
+                <i>the 138th Research Meeting of SIGPRO (PRO-2021-5), Information Processing Society of Japan</i>, Tsukuba, Japan, Mar 2022.
+                <a href="https://sigpro.ipsj.or.jp/pro2021-5/program/">link</a>
+              </p>
+            </li>
+            <li>
+              <p class="my-paper">
+                <b>Task Parallel Language Tascell and its Application to Hierarchical Matrices</b>(in Japanese), <u>Zhengyang Bai</u>,
+                <i>The 14th ICT Innovation</i>, Kyoto, Japan, Feb 2020.
+                <a href="https://ict-nw.i.kyoto-u.ac.jp/old/ict-innovation/14th/panel/index.php.html">link</a>
+              </p>
+            </li>
             <li>
               <p class="my-paper">
                 <b>Parallelization of Matrix Partitioning in Construction of Hierarchical Matrices by Cilk Plus</b>(in Japanese), <u>Zhengyang Bai</u>, Tasuku Hiraishi, Akihiro Ida, Hiroshi Nakashima, Masahiro Yasugi,
-                <i>The 20th Programming and Programming Language Workshop (PPL2018)</i>, Poster, Yonago, Japan, Mar 2018.
+                <i>The 20th Programming and Programming Language Workshop (PPL2018)</i>, Yonago, Japan, Mar 2018.
                 <a href="https://jssst-ppl.org/workshop/2018/program.html">link</a>
               </p>
             </li>
