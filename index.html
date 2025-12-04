@@ -493,61 +493,69 @@
         <article class="blog-post my-article">
           <h5 class="blog-post-title mb-1">&centerdot; Leveraging Ray Casting for Task Splitting over Processing Elements</h5>
           <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;Task splitting based on task dependency analysis is a critical aspect of task-based runtime systems, as it significantly impacts performance. 
-            An effective task splitting algorithm should allocate tasks to processing elements (PEs) with improved data locality and minimizing the overhead caused by data communication. 
-            Traditionally, this analysis is performed using a Task Dependency Graph, which is a sparse matrix with complex algorithms, making it difficult to accelerate. 
-            However, we propose a novel approach to enhance performance by modeling the task dependency analysis problem as a visibility problem and employing ray casting 
-            to extract the dependencies and split the tasks.
+            &nbsp;&nbsp;&nbsp;&nbsp;Task splitting based on task-dependency analysis is a critical component of task-based runtime systems, as it directly influences overall performance. 
+            An effective splitting strategy must assign tasks to processing elements (PEs) with strong data locality while minimizing communication overhead. 
+            Traditionally, such analysis relies on constructing and traversing a Task Dependency Graph—a sparse and computationally complex structure that is difficult to accelerate efficiently. 
+            To address this challenge, we propose a novel approach that reformulates task-dependency analysis as a visibility problem and leverages ray casting to extract dependencies and perform task splitting.
           </p>
+          
           <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;In this research, we delve into the concept of using ray casting for task dependency analysis and splitting, 
-            explaining why it offers a promising alternative to conventional methods and the potential advantages over existing techniques.
+            &nbsp;&nbsp;&nbsp;&nbsp;In this work, we explore the use of ray casting for dependency analysis and task partitioning, 
+            highlighting why this formulation provides a compelling alternative to conventional techniques and discussing its potential performance advantages.
           </p>
+          
           <p><img src="img/ray-casting.png" width=100%/></p>
 
-          <h5 class="blog-post-title mb-1">&centerdot; H-matrix Construction by Task Parallel Languages</h5>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;This research is a parallelized implementation of hierarchical matrices construction using task parallel languages like <a href="https://cilkplus.github.io/">Cilk Plus</a> and <a href="http://ais.sys.i.kyoto-u.ac.jp/~task/tascell/index.html">Tascell</a> based on a Fortran implementation in <a href="http://ppopenhpc.cc.u-tokyo.ac.jp/ppopenhpc/2017/01/31/ppopen-applbem-ver-0-5-0/">HACApK</a> library coded by Prof. Akihiro Ida.</p>
-          
+          <h5 class="blog-post-title mb-1">&centerdot; H-matrix Construction and Node-aware Work-stealing in Tascell</h5>
           <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;The construction of the hierarchical matrix is achieved
-            by dividing a matrix into submatrices (partitioning), followed
-            by calculating these submatrices' entries (filling). The matrix
-            partitioning is divided into two sub-steps: cluster tree (CT)
-            construction by dividing objects into clusters, hierarchically, and
-            block cluster tree (BCT) construction by observing all cluster
-            pairs at the same level of the cluster tree that satisfy a given
-            admissibility condition. Therefore, both CT and BCT construction 
-            are unpredictably imbalance, it is difficult to parallelize it using 
-            traditional Techniques. Here, together with my supervisor and advisors,
-            I proposed a new parallel implementation on H-matrix construction using task parallel languages.
+            &nbsp;&nbsp;&nbsp;&nbsp;This research focuses on accelerating hierarchical matrix (H-matrix) construction using 
+            task-parallel languages such as 
+            <a href="https://cilkplus.github.io/">Cilk Plus</a> and 
+            <a href="http://ais.sys.i.kyoto-u.ac.jp/~task/tascell/index.html">Tascell</a>, 
+            based on the Fortran implementation in the 
+            <a href="http://ppopenhpc.cc.u-tokyo.ac.jp/ppopenhpc/2017/01/31/ppopen-applbem-ver-0-5-0/">HACApK</a> library 
+            developed by Prof. Akihiro Ida. The construction of H-matrices involves partitioning the matrix into 
+            submatrices (cluster tree and block-cluster tree construction) followed by filling their entries. 
+            Because both CT and BCT are highly irregular and unpredictably imbalanced, traditional parallelism 
+            techniques struggle to handle them efficiently. Together with my supervisor and advisors, we developed 
+            a new task-parallel implementation that exploits the dynamic scheduling features of Tascell.
           </p>
-          
-          <article>To learn details about HACApK, please check <a href="https://github.com/Post-Peta-Crest/ppOpenHPC/tree/MATH/HACApK">HACApK github repository</a>.</article>
-          <article>To learn more about Tascell, please visit <a href="https://github.com/tascell/sc-tascell">Tascell github repository</a>.</article>
-          <article>For details of this implementation, please go to <a href="https://github.com/simon2/H-div">GitHub repository</a> and read papers in JIP <a href="https://www.jstage.jst.go.jp/article/ipsjjip/27/0/27_840/_article">Vol.27</a> and <a href="https://www.jstage.jst.go.jp/article/ipsjjip/30/0/30_742/_article/-char/ja/">Vol.30</a>.</article>
-          <br/>
 
-          <h5 class="blog-post-title mb-1">&centerdot; Node-aware Work-stealing in Tascell</h5>
           <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;This research is initially built to solve a problem in CT construction in the research above,
-            which allows users to add notations to tell Tascell compiler how to deal with task request
-            bese on the information of where the task request comes from. We call this feature <i>node-guard</i>
-            and packaged it into Tascell with an easy syntax to use.
+            &nbsp;&nbsp;&nbsp;&nbsp;Building on this, we proposed a technique called <i>node-guard</i> for Tascell, which allows 
+            programmers to annotate tasks with hints about where requests originate. This mechanism provides 
+            fine-grained control over cross-node work stealing, enabling users to specify which types of tasks 
+            are suitable for cross-node execution and which should remain local. This feature is particularly 
+            useful when multiple kinds of parallel blocks coexist—some benefiting from cross-node scheduling, 
+            while others would cause performance degradation if stolen. We also observed that probabilistic 
+            control within node-guard may further improve performance, though more experiments are needed.
           </p>
-          <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;This research can be apply to all application with a similiar problem like CT construction.
-            In detail, when there are more than 1 kind of parallel blocks in the same part of program 
-            and some of them is appropriate for cross-node work-steal but the others are not, programmer
-            can use this feature to maximize the performance by control which can do cross node Work-stealing
-            and whic cannot.
-            We also found that this research gives programmer using Tascell a posibility to improve performance
-            by adding probability into node-guard control. However, this statement still needs more experiments to prove.
-          </p>
-          <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;To learn more about this research please visit <a href="https://github.com/simon2/sc-tascell/tree/mpi-bcst">my Tascell repository</a> forked from origin Tascell.
-            (Will merge into origin Tascell in the future.)
-          </p>
-        </article>
+
+          <article>
+            To learn details about HACApK, please check the 
+            <a href="https://github.com/Post-Peta-Crest/ppOpenHPC/tree/MATH/HACApK">HACApK GitHub repository</a>.
+          </article>
+
+          <article>
+            To learn more about Tascell, please visit the 
+            <a href="https://github.com/tascell/sc-tascell">Tascell GitHub repository</a>.
+          </article>
+
+          <article>
+            For details of the H-matrix implementation, please see 
+            <a href="https://github.com/simon2/H-div">this GitHub repository</a> and related papers in JIP 
+            (<a href="https://www.jstage.jst.go.jp/article/ipsjjip/27/0/27_840/_article">Vol.27</a>,
+            <a href="https://www.jstage.jst.go.jp/article/ipsjjip/30/0/30_742/_article/-char/ja/">Vol.30</a>).
+          </article>
+
+          <article>
+            For node-aware work-stealing, visit 
+            <a href="https://github.com/simon2/sc-tascell/tree/mpi-bcst">my Tascell repository</a>
+            (to be merged into the main Tascell repository in the future).
+          </article>
+
+          <br/>
+        </article> 
       </div>
 
       <div class="hidden-content" id="publication-content">
