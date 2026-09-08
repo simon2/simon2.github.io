@@ -41,24 +41,6 @@
       vertical-align: -.125em;
       fill: currentColor;
     }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 3rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
   </style>
 
   <!-- Custom styles for this template -->
@@ -66,17 +48,6 @@
   <link href="css/mystyle.css" rel="stylesheet">
   <link href="css/timeline.css" rel="stylesheet">
 
-  <script>
-    var current = 'bio-content'
-
-    function contentControl(id) {
-      var prev = document.getElementById(current);
-      prev.classList.add("hidden-content");
-      current = id;
-      var curr = document.getElementById(current);
-      curr.classList.remove("hidden-content");
-    }
-  </script>
 </head>
 
 <body>
@@ -89,19 +60,6 @@
         </div>
       </div>
     </header>
-
-    <div class="nav-scroller py-1 mb-2">
-      <nav class="nav d-flex justify-content-between">
-        <a class="p-2 link-secondary my-nav-content" onclick="contentControl('bio-content')"
-          style="font-size:x-large;">Biography</a>
-        <a class="p-2 link-secondary my-nav-content" onclick="contentControl('publication-content')"
-          style="font-size:x-large;">Publication Lists</a>
-        <a class="p-2 link-secondary my-nav-content" onclick="contentControl('award-content')"
-          style="font-size:x-large;">Research Funds</a>
-        <a class="p-2 link-secondary my-nav-content" onclick="contentControl('activity-content')"
-          style="font-size:x-large;">Academic Activities</a>
-      </nav>
-    </div>
   </div>
 
   <main class="container">
@@ -153,47 +111,6 @@
                 <p class="my-sv">RIKEN Center for Computational Science</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-1"></div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Internship Student</h5>
-                <p class="text-muted my-date">Intership, Mar & Aug 2021, Online. </p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/Yahoo_Japan_Logo.png" width="50" />
-              </div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Outsourcing Partner @ Yahoo! Japan</h5>
-                <p class="text-muted my-date">Part-time, Apr 2022 -- Mar 2023, Osaka. </p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/ku_logo.jpg" height="50" />
-              </div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Research Assistant @ Kyoto University</h5>
-                <p class="text-muted my-date">Part-time, Nov 2019 -- Mar 2023, Kyoto. </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-1"></div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Kyoto University Graduate Division Fellow</h5>
-                <p class="text-muted my-date">Part-time, Dec 2021 -- Mar 2022, Kyoto. </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-1"></div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Teaching Assistant</h5>
-                <p class="text-muted my-date">Part-time, Apr 2018 -- Jul 2020, Kyoto. </p>
-              </div>
-            </div>
 
             <div class="row">
               <div class="col-md-1">
@@ -202,23 +119,6 @@
               <div class="col-md-11">
                 <h5 class="blog-post-title mb-1">System Engineer @ Fujitsu Marketing Ltd.</h5>
                 <p class="text-muted my-date">Contract, Oct 2015 -- Mar 2016, Tokyo. </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-1"></div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Overseas Internship Program Participant</h5>
-                <p class="text-muted my-date">Internship, Aug 2014 -- Nov 2014, Tokyo. </p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/tb_logo.jpg" height="50" />
-              </div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Android Engineer (intern) @ Teambition</h5>
-                <p class="text-muted my-date">Internship, Dec 2014 -- Feb 2015, Shanghai. </p>
               </div>
             </div>
 
@@ -234,7 +134,7 @@
                 <img src="img/ku_logo.jpg" height="50" />
               </div>
               <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Doctor of Informatics, Kyoto University</h5>
+                <h5 class="blog-post-title mb-1">Master & Doctor of Informatics, Kyoto University</h5>
                 <p class="text-muted my-date">Apr 2019 -- Mar 2023, Kyoto. </p>
                 <p class="my-sv">Department: Department of System Science, Graduate School of Informatics</p>
                 <p class="my-sv">Laboratory: Supercomputing Laboratory (Nakashima & Fukazawa Lab.)</p>
@@ -243,20 +143,6 @@
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-1">
-                <img src="img/ku_logo.jpg" height="50" />
-              </div>
-              <div class="col-md-11">
-                <h5 class="blog-post-title mb-1">Master of Informatics, Kyoto University</h5>
-                <p class="text-muted my-date">Apr 2017 -- Mar 2019, Kyoto. </p>
-                <p class="my-sv">Department: Department of System Science, Graduate School of Informatics</p>
-                <p class="my-sv">Laboratory: Supercomputing Laboratory (Nakashima & Fukazawa Lab.)</p>
-                <p class="my-sv">Supervisor: Prof. Hiroshi Nakashima</p>
-                <p class="my-sv">Thesis: Implementation of Partitioning of Hierarchical Matrices using Task Parallel
-                  Languages</p>
-              </div>
-            </div>
 
             <div class="row">
               <div class="col-md-1">
@@ -273,7 +159,26 @@
           </article>
         </div>
 
-        <div class="hidden-content" id="publication-content">
+        <div id="honor-content">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Awards
+          </h3>
+
+          <article class="blog-post">
+            <ul class="my-list">
+              <li>
+                <b>Best Poster Award</b>, 
+                <i>The 48th International Conference on Parallel Processing (ICPP2019)</i>, Aug 2019. <br />
+              </li>
+              <li>
+                <b>Outstanding Research Award</b>, 
+                <i>Cross-disciplinary Workshop on Computing Systems, Infrastructures, and Programming (xSIG2019)</i>, May 2019. <br />
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div id="publication-content">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">
             Publication Lists
           </h3>
@@ -541,7 +446,7 @@
           </article>
         </div>
 
-        <div class="hidden-content" id="award-content">
+        <div id="award-content">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">
             Research Funds
           </h3>
@@ -589,7 +494,7 @@
           </article>
         </div>
 
-        <div class="hidden-content" id="activity-content">
+        <div id="activity-content">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">
             Academic Activities
           </h3>
